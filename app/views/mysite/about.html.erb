@@ -2,11 +2,34 @@
 <html>
 	<head>
 		<title>first page</title>
-		
+		<style>
+			.all{
+				margin:auto;
+				width:70%;
+			}
+			.center{
+				text-align:center;
+				clear:left;
+			}
+			.col{
+				float:left;
+				width:48%;
+				margin:2px;
+				height:200px;
+			}
+			.imge{
+				height:100%;
+				width:100%;
+			}
+			.link{
+				font-size:30px;
+				font-weight:bold;
+				margin:5px;
+			}
+		</style>
 	</head>
 	<body class="all">
-		<div class="center"><h1>about</h1></div>
+			<div class="center"><%= link_to 'home', root_path, :class => "link" %></div>
 		
-		<div class="center"><h1>footer</h1></div>
 	</body>
 </html>
