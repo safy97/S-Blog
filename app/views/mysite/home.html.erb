@@ -2,40 +2,9 @@
 <html>
 	<head>
 		<title>first page</title>
-		<style>
-			.all{
-				margin:auto;
-				width:70%;
-			}
-			.center{
-				text-align:center;
-				clear:left;
-			}
-			.col{
-				float:left;
-				width:48%;
-				margin:2px;
-				height:200px;
-			}
-			.imge{
-				height:100%;
-				width:100%;
-			}
-			.link{
-				font-size:30px;
-				font-weight:bold;
-				text-decoration:none;
-			}
-		</style>
 	</head>
-	<body class="all">
-		<div class="center"><h1>home</h1></div>
-		<div class="col">
-			<%= image_tag("AAA.jpg", :alt => "sea",:class => "imge") %>
-		</div>
-		<div class="col">
-			<%= image_tag("aab.jpg", :alt => "sea",:class => "imge") %>
-		</div>
-		<div class="center" style="margin:20px;"><%= link_to 'about', about_path, :class => "link" %></div>
+		<div class="center jumbotron">
+			<h1>Alpha Blog</h1>
+			<%= link_to 'Sign Up', "#", :class => "btn btn-primary btn-lg"%>
 	</body>
 </html>

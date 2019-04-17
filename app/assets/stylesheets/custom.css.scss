@@ -1,0 +1,22 @@
+
+@import "bootstrap";
+.navbar {
+  background-color: #FDF6EA !important;
+  margin-bottom: 30px;
+}
+.center {
+  text-align: center;
+}
+.jumbotron{
+  background-image: asset-url("blog.jpg");
+  background-size: cover;
+  height: 500px;
+}
+.jumbotron h1{
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 50px;
+}
