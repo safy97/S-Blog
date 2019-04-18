@@ -1,0 +1,18 @@
+<% if obj.errors.any? %>
+   <div class="row">
+     <div class = "offset-sm-2 col-sm-10">
+       <div class= "card bg-danger">
+         <div class="card-header">
+           <%= pluralize(obj.errors.count,"error")%>
+           artcile can't be save :
+         </div>
+         <ul class="list-group list-group-flush">
+           <% obj.errors.full_messages.each do |msg| %>
+             <li class="list-group-item"><%= msg %></li>
+           <% end %>
+         </ul>
+       </div>
+     </div>
+   </div>
+   
+<% end %>

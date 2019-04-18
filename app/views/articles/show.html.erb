@@ -1,9 +1,11 @@
-<h1>show action</h1>
-<p>
-  Title <%=@article.title %>
-</p>
-<p>
-  description <%=@article.description %>
-</p>
-<%= link_to 'back to articles' , articles_path%> <br/>
-<%= link_to 'edit this article' , edit_article_path%>
+<div class="card">
+  <div class="card-header">
+     <strong><%=@article.title %></strong>
+  </div>
+  <div class="card-body">
+    <p class="card-title"><%=@article.description %></p>
+    <%= link_to "Edit" , edit_article_path(@article), class: "btn btn-primary"%>
+    <%= link_to "Delete" , article_path(@article),method: :delete, class: "btn btn-danger"%>
+    <%= link_to "Return to Articles" , articles_path , class: "btn btn-success"%>
+  </div>
+</div>
