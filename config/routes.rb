@@ -4,4 +4,6 @@ Rails.application.routes.draw do
    root  'mysite#home'
   get 'about', to: 'mysite#about'
   resources  :articles
+  get 'signup', to:'users#new'
+  resources :users, except: [:new]
 end
