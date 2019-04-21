@@ -1,13 +1,21 @@
 
 <% @articles.each do |article| %>
   <div class ="row" style="margin:10px">
-    <div class="offset-sm-2 col-sm-8">
+    <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
            <strong><%= link_to article.title , article_path(article)%></strong>
         </div>
         <div class="card-body">
-          <p class="card-title"><%= truncate(article.description,length:30) %></p>
+          <p class="card-title">
+            <%= truncate(article.description,length:30) %>
+            <div class="text-muted small">
+              Created_by <%= article.user ? article.user.username : "not known" %> , 
+              <%= time_ago_in_words(article.created_at)%> ago ,
+              last_updated: <%= time_ago_in_words(article.updated_at)%> ago
+            </div>
+          </p>
+    
           <%= link_to "Edit" , edit_article_path(article), class: "btn btn-primary"%>
           <%= link_to "Delete" , article_path(article),method: :delete, class: "btn btn-danger"%>
         </div>
