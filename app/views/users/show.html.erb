@@ -5,4 +5,14 @@
   </div>
 </div>
 <h5 align="center"><%= @user.username%> articles</h5>
-<%= render 'articles/article', obj: @user.articles %>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @user_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
+<%= render 'articles/article', obj: @user_articles%>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @user_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>

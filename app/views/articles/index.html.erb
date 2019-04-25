@@ -1,2 +1,12 @@
 <h1 class="center">Articles</h1>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
 <%= render 'article', obj: @articles%>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>

@@ -1,4 +1,9 @@
 <h1 align="center">All users</h1>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
 <% @users.each do |user| %>
   <div class ="row" style="margin:10px">
     <div class="col-sm-12">
@@ -18,3 +23,8 @@
     </div>
   </div>
 <% end %>
+<div class="row">
+  <div class="offset-sm-5 col-sm-4">
+      <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
