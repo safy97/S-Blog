@@ -15,8 +15,10 @@
       </div>
     <% end %>
     <p class="card-title"><%=@article.description %></p>
+    <% if logged_in? && current_user == @article.user%>
     <%= link_to "Edit" , edit_article_path(@article), class: "btn btn-primary"%>
     <%= link_to "Delete" , article_path(@article),method: :delete, class: "btn btn-danger"%>
+    <% end %>
     <%= link_to "Return to Articles" , articles_path , class: "btn btn-success"%>
   </div>
 </div>
