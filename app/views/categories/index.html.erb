@@ -1,0 +1,22 @@
+<h1 align="center">Listing all categories</h1>
+<div class="row">
+  <div class="offset-sm-4 col-sm-4">
+      <%= will_paginate @categories, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
+<% @categories.each do |category| %>
+  <div class ="row" style="margin:10px">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class ="card-header">
+          <%= link_to category.name , category_path(category) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="row">
+  <div class="offset-sm-4 col-sm-4">
+      <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>
