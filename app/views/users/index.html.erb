@@ -1,5 +1,5 @@
 <h1 align="center">All users</h1>
-<div style="margin-left: 43.3%">
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
 <% @users.each do |user| %>
@@ -28,6 +28,6 @@
     </div>
   </div>
 <% end %>
-<div style="margin-left: 43.3%">
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>

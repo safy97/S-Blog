@@ -1,8 +1,11 @@
 <h1 class="center"><%= "Category " + @category.name %></h1>
-<div style="margin-left: 43.3%">
+<%if logged_in? && current_user.admin?%>
+<div class="mx-auto" style="width: fit-content;margin: 10px;"><%= link_to "Edit" , edit_category_path(@category), class: "btn btn-primary"%></div>
+<%end%>
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @category_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
 <%= render 'articles/article', obj: @category_articles%>
-<div style="margin-left: 43.3%">
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @category_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>

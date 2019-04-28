@@ -1,8 +1,8 @@
 <h1 class="center">Articles</h1>
-<div style="margin-left: 43.3%">
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
 <%= render 'article', obj: @articles%>
-<div style="margin-left: 43.3%">
+<div class="mx-auto" style="width: fit-content">
       <%= will_paginate @articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
